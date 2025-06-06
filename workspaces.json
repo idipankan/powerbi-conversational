@@ -1,0 +1,10 @@
+{
+    "Sample Workspace 1": {
+        "workspace_id": "<workspace-id-1>",
+        "dataset_id": "<usage-metrics-dataset-id-1>"
+    },
+    "Sample Workspace 2": {
+        "workspace_id": "<workspace-id-2>",
+        "dataset_id": "<usage-metrics-dataset-id-2>"
+    }
+}
