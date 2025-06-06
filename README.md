@@ -4,6 +4,7 @@ This Streamlit app provides a natural language interface to obtain insights from
 
 ## Architecture
 
+![Architecture](https://idipankan.com/wp-content/uploads/2025/06/Natural-Language-OLAP-LLM.drawio.png)
 
 ## How It Works
 
