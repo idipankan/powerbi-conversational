@@ -1,0 +1,23 @@
+Use this reference DAX and modify only this DAX, adding additional filters for the report used.
+If the query is more general in nature and does not talk about need to split it at a day level, remove the [Date] column from the _DS0Core variable to eliminate processing redundant data.
+CountReportId gives the total views. DistinctCountUserId gives the unique views by the specific user. Again, remember modifying the query to suit the user's questions.
+However, do not deviate by using any other names for the tables/columns than provided below. 
+
+ReportName provides the name of the report. Extract the report name from the user query and use it to filter if relevant. The Date column provides the time range of the information.
+The UserID column provides the user details of the reports. If churn is asked, ensure to add Date column for deep dive analysis.
+
+// DAX Query
+DEFINE
+  
+
+  VAR __DS0Core = 
+    SUMMARIZECOLUMNS(
+      'Dates'[Date],
+      'Reports'[ReportName],
+      'Report views'[UserId],
+      "CountReportId", CALCULATE(COUNTA('Report views'[ReportId])),
+      "DistinctCountUserId", CALCULATE(DISTINCTCOUNT('Report views'[UserId]))
+    )
+
+EVALUATE
+  __DS0Core
